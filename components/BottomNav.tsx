@@ -30,15 +30,21 @@ const BottomNav: React.FC = () => {
           <ShoppingBag strokeWidth={2.5} size={24} />
         </div>
         
-        <button className="flex flex-col items-center justify-center w-16 gap-1 text-slate-400 hover:text-primary transition-colors">
+        <Link 
+          to="/reviews"
+          className={`flex flex-col items-center justify-center w-16 gap-1 transition-colors ${isActive('/reviews') ? 'text-primary' : 'text-slate-400 hover:text-primary'}`}
+        >
           <MessageSquare strokeWidth={2.5} size={24} />
           <span className="text-[10px] font-bold">Reviews</span>
-        </button>
+        </Link>
         
-        <button className="flex flex-col items-center justify-center w-16 gap-1 text-slate-400 hover:text-primary transition-colors">
+        <Link 
+          to="/profile"
+          className={`flex flex-col items-center justify-center w-16 gap-1 transition-colors ${isActive('/profile') ? 'text-primary' : 'text-slate-400 hover:text-primary'}`}
+        >
           <User strokeWidth={2.5} size={24} />
           <span className="text-[10px] font-bold">Profile</span>
-        </button>
+        </Link>
       </div>
     </nav>
   );

@@ -3,6 +3,8 @@ import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Checkout from './pages/Checkout';
+import Reviews from './pages/Reviews';
+import Profile from './pages/Profile';
 import BottomNav from './components/BottomNav';
 
 const AppContent: React.FC = () => {
@@ -16,6 +18,8 @@ const AppContent: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       {showBottomNav && <BottomNav />}
     </div>
